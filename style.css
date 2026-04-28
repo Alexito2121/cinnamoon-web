@@ -1,0 +1,199 @@
+/* ==========================================
+   CONFIGURACIONES GENERALES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ffe6ea 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5d4037;
+}
+
+/* ==========================================
+   TARJETA PRINCIPAL Y CONTENEDOR
+   ========================================== */
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 25px rgba(255, 182, 193, 0.4);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: slideUp 0.6s ease-out;
+}
+
+.brand-title {
+    font-family: 'Pacifico', cursive;
+    color: #d81b60;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* ==========================================
+   FORMULARIOS E INPUTS
+   ========================================== */
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #f8bbd0;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #fffafb;
+}
+
+.input-group input:focus {
+    border-color: #d81b60;
+    box-shadow: 0 0 8px rgba(216, 27, 96, 0.2);
+}
+
+/* ==========================================
+   BOTONES Y ENLACES
+   ========================================== */
+.btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #d81b60;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    text-decoration: none;
+    display: block;
+}
+
+.btn:hover {
+    background-color: #c2185b;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.switch-text a {
+    color: #d81b60;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding-bottom: 1px;
+    border-bottom: 2px solid transparent;
+}
+
+.switch-text a:hover {
+    border-bottom: 2px solid #d81b60;
+    color: #ad1457;
+}
+
+/* ==========================================
+   ESTILOS DE BIENVENIDA (AÑADIDO)
+   ========================================== */
+.welcome-title {
+    font-family: 'Pacifico', cursive;
+    color: #d81b60;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.welcome-text {
+    margin-bottom: 35px; /* Espacio para que el botón no se pegue */
+    color: #5d4037;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.cake-icon {
+    display: inline-block;
+    font-size: 50px;
+    margin-bottom: 15px;
+    animation: wiggle 2s infinite ease-in-out;
+}
+
+.btn-logout {
+    background-color: #f48fb1; /* Rosa más suave para diferenciar */
+    margin-top: 20px;
+}
+
+.btn-logout:hover {
+    background-color: #f06292;
+}
+
+/* ==========================================
+   ANIMACIONES
+   ========================================== */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-8deg); }
+    50% { transform: rotate(8deg); }
+}
+
+/* Clases para la animación con JS */
+.form-hidden {
+    display: none;
+    opacity: 0;
+}
+
+.form-active {
+    display: block;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
